@@ -105,6 +105,30 @@ namespace NUnit3Tests
 			Assert.Warn("Warning message, this is for test only... ");
 		}
 
+		[Test]
+		public void TestMethod7_Error()
+		{
+			throw new Exception("Expected error, this is for test only... ");
+		}
+
+		[Test]
+		public void TestMethod8_Error()
+		{
+			throw new Exception("Another expected error, this is for test only... ");
+		}
+
+		[Test]
+		public void TestMethod9_Fail()
+		{
+			Assert.Throws<NullReferenceException>(() => throw new ArgumentException());
+		}
+
+		[Test]
+		public void TestMethod10_Fail()
+		{
+			Assert.Fail("Another error message, any details can be provided here ... ");
+		}
+
 		[TearDown]
         public void TearDown()
         {
