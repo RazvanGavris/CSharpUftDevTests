@@ -129,6 +129,20 @@ namespace NUnit3Tests
 			Assert.Fail("Another error message, any details can be provided here ... ");
 		}
 
+		[Test]
+		[Ignore("for testing porposes")]
+		public void TestMethod11_Ignore()
+		{
+			//test will be skipped
+		}
+
+		[Test]
+		[Ignore("for testing porposes")]
+		public void TestMethod12_Ignore()
+		{
+			//test will be skipped
+		}
+
 		[TearDown]
         public void TearDown()
         {
